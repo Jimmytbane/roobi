@@ -48,10 +48,6 @@ rbv = `ruby -v`
     event.respond(rbv)
   end
 
-  bot.command :memory do |event|
-	  event.respond(`free -m`)
-  end
-
   bot.command :entropy do |event|
 	  event.respond(`cat /proc/sys/kernel/random/entropy_avail`)
   end
