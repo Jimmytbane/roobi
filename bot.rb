@@ -24,8 +24,10 @@ bot = Discordrb::Commands::CommandBot.new token: ENV['RUBY_SECRET'], client_id: 
 
   trap "SIGINT" do
     abort
-    end
+  end
 
+puts nil
+puts "Roobi running on --> #{RUBY_PLATFORM}"
 puts nil
 puts 'Invite URL: https://tknk.io/1FME'
 puts 'Click on it to invite it to your server.'
@@ -40,8 +42,10 @@ end
 
 rbv = `ruby -v`
 
+entropy = `cat /proc/sys/kernel/random/entropy_avail`
+
   bot.command :source do |event|
-    event.respond("You can see a copy of Roobi's source, in accordance with the AGPLv3 license, without using any non-free software at this link\nhttps://raw.githubusercontent.com/jmfgdev/roobi/master/bot.rb")
+    event.respond("You can see a copy my source, in accordance with the AGPLv3 license, without using any non-free software at this link\nhttps://raw.githubusercontent.com/jmfgdev/roobi/master/bot.rb")
   end
 
   bot.command :rbv do |event|
@@ -49,12 +53,12 @@ rbv = `ruby -v`
   end
 
   bot.command :entropy do |event|
-	  event.respond(`cat /proc/sys/kernel/random/entropy_avail`)
+	  event.respond("Linux kernel entropy --> #{entropy}")
   end
  
   bot.command :passgen do |event|
     event.user.pm(SecureRandom.base64(15))
-    event.respond("Check ur pm's @#{event.user.name}")
+    event.respond("Check ur pm's #{event.user.name}")
   end
 
   bot.command :upload do |event|
@@ -70,7 +74,7 @@ rbv = `ruby -v`
   end
 
   bot.command :platform do |event|
-	  event.respond("My platform is: #{RUBY_PLATFORM}")
+	  event.respond("My platform is: #{RUBY_PLATFORM}\n\n My Ruby version is: #{rbv}")
   end
 
   bot.command :kek do |event|
