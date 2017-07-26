@@ -44,6 +44,10 @@ rbv = `ruby -v`
 
 entropy = `cat /proc/sys/kernel/random/entropy_avail`
 
+  bot.command :RIP do |event|
+    event.respond "https://cdn.discordapp.com/attachments/336494393978650635/339733384169390080/smackdatzn6_55293.jpg_480_480_0_64000_0_1_0.jpg"
+  end
+
   bot.command :source do |event|
     event.respond("You can see a copy my source, in accordance with the AGPLv3 license, without using any non-free software at this link\nhttps://raw.githubusercontent.com/jmfgdev/roobi/master/bot.rb")
   end
