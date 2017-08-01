@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 =begin 
 Copyright © 2017 jimmybot@teknik.io
