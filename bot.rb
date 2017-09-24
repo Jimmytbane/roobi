@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 =begin 
-Copyright © 2017 jimmybot@teknik.io
+Copyright (C) 2017 jmfgdev
 
 This program is free software: you can redistribute it and/or modify 
 it under the terms of the GNU Affero General Public License as published by 
@@ -132,7 +132,7 @@ entropy = `cat /proc/sys/kernel/random/entropy_avail`
 
   bot.command :license do |event|
   event.respond("
-Copyright © 2017 jimmybot@teknik.io
+Copyright (C) 2017  jmfgdev
 
 This program is free software: you can redistribute it and/or modify 
 it under the terms of the GNU Affero General Public License as published by 
